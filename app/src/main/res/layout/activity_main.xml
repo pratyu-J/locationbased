@@ -21,6 +21,14 @@
         android:layout_marginTop="175dp"
         android:text="getlocation" />
 
+    <TextView
+        android:id="@+id/disp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="position"
+        android:textSize="18sp"
+        android:layout_margin="8dp"/>
+
     <View
         android:layout_width="0dp"
         android:layout_height="80dp"/>
@@ -46,6 +54,8 @@
             android:text="send location as sms"
             android:layout_weight="1"
             android:layout_margin="10dp"/>
+
+
 
     </LinearLayout>
 

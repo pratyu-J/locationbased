@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 
@@ -16,6 +17,7 @@ public class MainActivity extends Activity {
     String mPermission = Manifest.permission.ACCESS_FINE_LOCATION;
     Location_Tracker gps;
     Double latitude, longitude;
+    TextView display;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends Activity {
         btnShowLocation = (Button) findViewById(R.id.button);
         sendEmail = findViewById(R.id.semail);
         sendSMS = findViewById(R.id.ssms);
+        display = findViewById(R.id.disp);
 
         // we will show the location button click event
         btnShowLocation.setOnClickListener(new View.OnClickListener() {
@@ -45,6 +48,7 @@ public class MainActivity extends Activity {
                      latitude = gps.getLatitude();
                      longitude = gps.getLongitude();
                     Toast.makeText(getApplicationContext(), "This is your Location : \nLatitude: " + latitude + "\nLongitude: " + longitude, Toast.LENGTH_LONG).show();
+                    display.setText("Your Location is : \nLatitude: " + latitude + "\nLongitude: " + longitude);
                 }
                 else {
                     gps.showSettings();
