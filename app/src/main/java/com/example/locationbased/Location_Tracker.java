@@ -86,7 +86,7 @@ public class Location_Tracker extends Service implements LocationListener {
         return longitude;
     }
     //This method is to check if GPS is enabled
-    public boolean canGetLocation() {
+    public boolean canGetLocation(String bestProvider) {
         return this.canGetLocation;
     }
     //This will launch settings

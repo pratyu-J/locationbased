@@ -22,16 +22,28 @@
         android:text="getlocation" />
 
     <TextView
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(default) coarse accuracy selected"
+        android:layout_margin="10dp"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Fine Accuracy"/>
+
+    <TextView
         android:id="@+id/disp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="position"
-        android:textSize="18sp"
+        android:textSize="14sp"
         android:layout_margin="8dp"/>
 
-    <View
-        android:layout_width="0dp"
-        android:layout_height="80dp"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
